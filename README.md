@@ -26,4 +26,4 @@ To eliminate food management errors in healthcare facilities and empower adminis
 ## 👩‍💻 Authors
 
 Developed at **ESEN Manouba**:
-* **Abid Ahmed** - *Full-Stack Developer & BI Analyst* - [AbidAhmed1](https://github.com/AbidAhmed1)
+* **Abid Ahmed** - [AbidAhmed1](https://github.com/AbidAhmed1)
