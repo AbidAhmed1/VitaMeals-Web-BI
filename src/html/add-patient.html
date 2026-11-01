@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un Patient</title>
+    <link rel="stylesheet" href="../css/addpatient.css"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"> <!-- Pour les icônes -->
+    <script src="../javascript/script.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Galindo&family=Grenze:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lalezar&display=swap" rel="stylesheet">
+</head>
+<body>
+</head>
+<body>
+
+
+    <!--=============== barre de navigation  ===============-->
+          <section class="section-1">
+            <header>
+        		<h2 class="logo"><img src="logovitameals.png" alt=""></h2>
+                <nav>
+                    <a href="../html/acceuil.html" ><i class="acc"></i> Accueil</a>
+                <a href="../html/reclamation.html" ><i class="pat"></i> Espace patient</a>
+                    <a href="../html/contact.html" ><i class="cont"></i> Contact</a>
+                    <a href="../html/a-propos.html" ><i class="aprop"></i> À propos</a>
+    
+                </nav>
+            </header>
+    
+        </section>
+            <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    
+        <script>
+            $(document).ready(function(){
+                $(window).on('scroll', function(){
+                    if ($(window).scrollTop()) {
+                        $("header").addClass('bgc');
+                    }else{
+                        $("header").removeClass('bgc');
+                    }
+                });
+            });
+        </script>
+    <br><br><br><br><br><br><br>    <br><br><br><br><br><br><br>
+
+
+
+    <main class="background">
+        
+        <section class="bg">
+            
+            <div class="content">
+              <h2 class="bigT">Ajouter un nouveau patient</h2>
+            
+              <form action="save_new_patient.php" method="POST">
+                <!-- Nom du patient -->
+                <label for="cin">Cin du patient:</label>
+                <div class="box">
+                    <span><ion-icon name="person-circle-outline"></ion-icon></span>
+                    <input type="text" name="cin" placeholder="Cin" required>
+                </div>
+
+                <label for="nom">Nom du patient:</label>
+                <div class="box">   
+                    <span><ion-icon name="person-circle-outline"></ion-icon></span>
+                    <input type="text" name="nom" placeholder="Nom du patient" required>
+                </div>
+                
+                <!-- Prénom du patient -->
+                <label for="prenom">Prénom du patient:</label>
+                <div class="box">
+                    <span><ion-icon name="person-circle-outline"></ion-icon></span>
+                    <input type="text" name="prenom" placeholder="Prénom du patient" required>
+                </div>
+                
+                <!-- Date de naissance -->
+                <label for="date_naissance">Date de naissance:</label>
+                <div class="box">
+                    <span><ion-icon name="person-circle-outline"></ion-icon></span>
+                    <input type="date" id="date_naissance" name="date_naissance" placeholder="Date de naissance" required>
+                </div>
+                
+                <!-- Téléphone -->
+                <label for="tel">Téléphone:</label>
+                <div class="box">
+                    <span><ion-icon name="person-circle-outline"></ion-icon></span>
+                    <input type="text" id="tel" name="tel" placeholder="Téléphone" required>
+                </div>
+                
+                <!-- Adresse -->
+                <label for="adresse">Adresse:</label>
+                <div class="box">
+                    <span><ion-icon name="person-circle-outline"></ion-icon></span>
+                    <input type="text" id="adresse" name="adresse" placeholder="Adresse" required>
+                </div>
+                
+                <!-- Numéro de chambre -->
+                <label for="num_chambre">Numéro de la chambre:</label>
+                <div class="box">
+                    <span><ion-icon name="person-circle-outline"></ion-icon></span>
+                    <input type="number" id="num_chambre" name="num_chambre" placeholder="Numéro de la chambre" min="0" required>
+                </div>
+                
+                <!-- Régime alimentaire -->
+                <label for="regime">Régime alimentaire:</label>
+                <div class="boxt">
+                    <select id="regime" name="regime" required>
+                        <option value="Normal">Normal</option>
+                        <option value="Diabétique">Diabétique</option>
+                        <option value="Sans sel">Sans sel</option>
+                        <option value="Végétarien">Végétarien</option>
+                    </select>
+                </div>
+                
+                <!-- Allergies -->
+                <label for="allergies">Allergies:</label>
+                <div class="boxttt">
+                    <textarea id="allergies" name="allergies" rows="3"></textarea>
+                </div>
+            
+                <!-- Statut (Hospitalisé ou Sorti) -->
+                <label for="statut">Statut:</label>
+                <div class="box">
+                    <select name="statut" id="statut" required>
+                        <option value="Hospitalisé">Hospitalisé</option>
+                        <option value="Sorti">Sorti</option>
+                    </select>
+                </div>
+                
+                <!-- Submit -->
+                <div class="box">
+                    <input type="submit" value="Ajouter le patient">
+                </div>
+            </form>
+            
+            
+           </div>
+     </div>
+        </section>
+    </main>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+      <!-- Footer Area DEBUT  -->
+     
+      <footer class="foter">
+        <div class="footer-area">
+            
+            <div class="columns column-one">
+                <div class="about">    		<h2 class="logo2"><img src="logovitameals.png" alt=""></h2>
+                </div>
+            </div>
+
+            <ul class="columns column-two">
+                <h4>Links</h4>
+                <li><a href="../html/acceuil.html" target="_blank">Accuiel</a></li>
+                <li><a href="../html/a-propos.html" target="_blank">A propos</a></li>
+                <li><a href="../html/contact.html" target="_blank">Contact</a></li>
+
+            </ul>
+
+            <ul class="columns column-three">
+                <h4>Partenaires</h4>
+                <li><a href="https://www.vitalait.net/tun/fr" target="_blank">Vitalait</a></li>
+                <li><a href="https://chahia.com.tn/" target="_blank">Chahia</a></li>
+                <li><a href="https://www.tunisierecyclage.org/" target="_blank">Tunisie Recyclage</a></li>
+                <li><a href="https://www.facebook.com/FruitsSecsMamya/" target="_blank">Mamya épicerie</a></li>
+                <li><a href="https://www.agritable.tn/" target="_blank">Agritable</a></li>
+              
+            </ul>
+
+            <ul class="columns column-four">
+                <div class="footer-address">
+                    <h4>Address</h4>
+                    <li>Rue Med -V</li>
+                    <li>Résidence de la liberté</li>
+                    <li>A coté de l'hopital militaire</li>
+                    <li>Tunisie</li>
+                </div>
+                <div class="footer-tel">
+                    <h4>Telephone</h4>
+                    <li> +216 44145268</li>
+                </div>
+            </ul>
+
+        </div>
+
+        <div class="copyright">&copy; Tous droits réservés-2025</div>
+
+    </footer>
+        <!-- Footer Area FIN  -->
+</body>
+</html>
