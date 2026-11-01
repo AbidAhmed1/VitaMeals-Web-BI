@@ -1,0 +1,771 @@
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+    background: no-repeat center / cover url('a');
+    height: 2000%;
+
+}
+ /* DEBUT BARRE NAV  */ 
+ .section-1 {
+	width: 100%;
+	background-size: cover;
+	height: 35vh;
+	background-position: center;
+}
+.logo img {
+    height: 30px; /* Réduit la hauteur à 30 pixels (ajustez selon vos besoins) */
+    /* Si vous préférez définir la largeur : */
+    /* width: 80px; */
+}
+ .logo2 img{
+    height: 60px; /* Réduit la hauteur à 30 pixels (ajustez selon vos besoins) */
+    /* Si vous préférez définir la largeur : */
+    /* width: 80px; */
+ }
+
+header {
+	display: flex;
+	padding: 30px;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	transition: 500ms;
+    background-color:#312b3d;
+    justify-content: center;
+	z-index: 100;
+    margin-bottom: 60%;
+}
+
+nav a {
+	margin-left: 120px;
+	font-size: 15px;
+	text-decoration: none;
+	font-family: sans-serif;
+	color: #eee;
+	text-transform: uppercase;
+	border-bottom:  3px solid transparent;
+	padding: 10px 1px;
+	transition: 200ms;
+}
+.active {
+	border-color: #00B3FF;
+}
+nav a:hover {
+	border-color: #00B3FF;
+}
+.logo {
+	font-size: 20px;
+	font-family: sans-serif;
+	margin-left: 60px;
+	color: #fff;
+    justify-content:right;
+}
+.bgc {
+	background: #eee;
+	padding: 10px;
+}
+.bgc .logo {
+	font-size: 30px;
+	color: #000;
+}
+.bgc nav a {
+	color: #222;
+}
+
+
+
+
+@media (max-width: 769px){
+	header {
+		flex-direction: column;
+		padding: 20px;
+	}
+	nav {
+		padding: 15px;
+		margin: 0px;
+	}
+}
+
+ /* FIN BARRE NAV*/ 
+
+ /* FIN BARRE NAV*/ 
+
+
+
+  /* DEBUT CONTINUE*/ 
+main{
+    margin-top:10%;
+
+
+}
+
+ .imlo{
+ height: 180px;
+ position: absolute;
+left: 170%;
+bottom: 40%; } 
+.text1{
+	width: 55%;
+    animation:to_right 1s ease forwards .8s;
+
+
+}
+.text1 h2{
+	color: #386e53;
+	font-size: 85px;
+	animation:to_right 1s ease forwards .8s;
+    font-family: "Nova Round", system-ui;
+    font-weight: 400;
+    font-style: normal;    font-weight: 400;
+    font-style: normal;
+}
+.text1 h1{
+	position: relative;
+    font-size: 50px;
+    color:#175674;
+    margin: 0 0 35px 0;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-rendering: optimizeLegibility;
+    font-family: "Lilita One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-optical-sizing: auto;
+    left: 60%;
+
+
+}
+
+
+.text1 p{
+	font-size: 30px;
+	margin: 40px 0;
+    width: 70%;
+    color: #12997c;
+	animation:to_right 1s ease forwards .8s;
+    font-family: "Nova Round", system-ui;
+    font-weight: 400;
+    font-style: normal;    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+
+}
+
+.text2{
+    position: relative;
+    left: 15%;
+    font-size: 30px;
+	margin: 40px 0;
+    width: 70%;
+    color: #12997c;
+	animation:to_right 1s ease forwards .8s;
+    font-family: "Nova Round", system-ui;
+    font-weight: 400;
+    font-style: normal;    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+   text-align: center;
+}
+.NOV{
+    margin-top: 5px;
+}
+.card {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    color: #fff;
+    background: transparent;
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 49, 49, 0.5);
+    border-right: 1px solid rgba(0, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(57, 255, 20, 0.5);
+    border-left: 1px solid rgba(255, 255, 113, 0.5);
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em;
+    
+  }
+  
+
+  
+  span {
+    position: absolute;
+    border-radius: 100vmax;
+  }
+  
+  .top {
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 5px;
+    background: linear-gradient(
+      90deg,
+      transparent 50%,
+      rgba(255, 49, 49, 0.5),
+      rgb(255, 49, 49)
+    );
+  }
+  
+  .bottom {
+    right: 0;
+    bottom: 0;
+    height: 5px;
+    background: linear-gradient(
+      90deg,
+      rgb(57, 255, 20),
+      rgba(57, 255, 20, 0.5),
+      transparent 50%
+    );
+  }
+  
+  .right {
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 0;
+    background: linear-gradient(
+      180deg,
+      transparent 30%,
+      rgba(0, 255, 255, 0.5),
+      rgb(0, 255, 255)
+    );
+  }
+  
+  .left {
+    left: 0;
+    bottom: 0;
+    width: 5px;
+    height: 0;
+    background: linear-gradient(
+      180deg,
+      rgb(255, 255, 113),
+      rgba(255, 255, 113, 0.5),
+      transparent 70%
+    );
+  }
+  
+  .top {
+    animation: animateTop 7s ease-in-out infinite;
+  }
+  
+  .bottom {
+    animation: animateBottom 7s ease-in-out infinite;
+  }
+  
+  .right {
+    animation: animateRight 7s ease-in-out infinite;
+  }
+  
+  .left {
+    animation: animateLeft 7s ease-in-out infinite;
+  }
+  
+  @keyframes animateTop {
+    25% {
+      width: 100%;
+      opacity: 1;
+    }
+  
+    30%,
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes animateBottom {
+    0%,
+    50% {
+      opacity: 0;
+      width: 0;
+    }
+  
+    75% {
+      opacity: 1;
+      width: 100%;
+    }
+  
+    76%,
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes animateRight {
+    0%,
+    25% {
+      opacity: 0;
+      height: 0;
+    }
+  
+    50% {
+      opacity: 1;
+      height: 100%;
+    }
+  
+    55%,
+    100% {
+      height: 100%;
+      opacity: 0;
+    }
+  }
+  
+  @keyframes animateLeft {
+    0%,
+    75% {
+      opacity: 0;
+      bottom: 0;
+      height: 0;
+    }
+  
+    100% {
+      opacity: 1;
+      height: 100%;
+    }
+  }
+
+
+
+/* keyframes */
+@keyframes to_bottom{
+	0%{
+		opacity: 0;
+		transform: translateY(-50px);
+
+}
+    100%{
+		opacity:1;
+		transform: translateY(0);
+	}
+
+}
+
+@keyframes to_right{
+	0%{
+		opacity: 0;
+		transform: translateX(-50px);
+
+}
+    100%{
+		opacity:1;
+		transform: translateX(0);
+	}
+
+}
+ 
+
+
+
+
+/* Statistiques */
+.stats h2, .features h2 {
+ font-family: "Cantora One", sans-serif;
+font-weight: 400;
+font-style: normal;
+font-weight:400;
+font-style:normal;
+font-size: 65px;
+line-height: 1;
+margin: 0;
+padding: 0;
+text-transform: uppercase;
+letter-spacing: -5px;
+text-align: center;
+color: 	  #1f1c50;
+animation:to_right 1s ease forwards .8s;
+
+text-shadow:
+-1px -1px 0 #5f0d0d,
+-1px -1px 0 #5f0d0d,
+-1px -1px 0 #5f0d0d,
+-1px -1px 0 #bb7c7c,
+
+
+}
+
+
+.stats-grid, .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stat-item, .feature-item {
+    background: #f9f9f9;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-item:hover, .feature-item:hover {
+    box-shadow: 0 10px 60px rgba(0, 0, 0, 0.15);
+}
+
+.stat-item i, .feature-item i {
+    font-size: 4rem;
+    color: 	  #1f1c50;
+    margin-bottom: 1rem;
+}
+
+.stat-item h3, .feature-item h3 {
+    font-size: 3rem;
+    color: #187569;
+    margin: 0.5rem 0;
+    font-weight: 600;
+    font-family: "Dancing Script", cursive;
+
+}
+
+.stat-item p, .feature-item p {
+    font-size: 1rem;
+    color: #c94d4d;
+    font-family: "Enriqueta", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+ /* Bouton to top */
+
+  
+  .NEP{
+    position: relative;
+    left: 25%;
+    font-family: "Dancing Script", cursive;
+    font-size: 25px;
+  }
+
+  .stats {
+    /* Adjust width as needed */
+    width: 80%;
+    margin: 20px auto; /* Center the section */
+    text-align: center; /* Center the heading */
+  }
+  
+  .fond {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .founders-container {
+    display: flex; /* Arrange founders in a row */
+    justify-content: center; /* Center the group of founders */
+    align-items: center; /* Vertically align items */
+  }
+  
+  .founder {
+    position: relative; /* Needed for absolute positioning of the name */
+    margin: 0 -20px; /* Negative margin to create overlap */
+    text-align: center; /* Center the image and name within each founder div */
+  }
+  
+  .imghov {
+    --color: #1c285f; /* the color of the border */
+    --border: 10px;   /* the thickness of the border */
+    --offset: 30px;   /* control the movement of the border */
+    --gap: 5px;       /* the gap on hover */
+  
+    border-radius: 50%;
+    cursor: pointer;
+    padding: calc(var(--border) + var(--gap));
+    border: var(--offset) solid #0000;
+    --_m: radial-gradient(50% 50%, #000 calc(100% - var(--offset)),#96202000 calc(100% - var(--border)));
+    -webkit-mask: var(--_m);
+            mask: var(--_m);
+    --_g: #181f8500 calc(99% - var(--border)), var(--color) calc(100% - var(--border)) 99%,#0000;
+    --_s: var(--offset);
+    --_r: 100% 100% at;
+    background:
+      radial-gradient(var(--_r) 0    0    ,var(--_g)) calc(100% + var(--_s)) calc(100% + var(--_s)),
+      radial-gradient(var(--_r) 100% 0    ,var(--_g)) calc(0%   - var(--_s)) calc(100% + var(--_s)),
+      radial-gradient(var(--_r) 0    100%,var(--_g)) calc(100% + var(--_s)) calc(0%   - var(--_s)),
+      radial-gradient(var(--_r) 100% 100%,var(--_g)) calc(0%   - var(--_s)) calc(0%   - var(--_s));
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+    transition: .4s;
+    position: relative; /* To control stacking order if needed */
+    z-index: 1; /* Ensure images are above other elements by default */
+  }
+  
+  .imghov:hover {
+    --_s: 0px;
+    z-index: 2; /* Bring hovered image to the front */
+  }
+  
+  .founder-name {
+    font-family: "Dancing Script", cursive;
+    font-size: 20px; /* Adjust as needed */
+    margin-top: 10px; /* Space between image and name */
+    position: absolute; /* Position the name below the image */
+    left: 50%;
+    transform: translateX(-50%); /* Center the name horizontally */
+    bottom: -30px; /* Adjust vertical positioning as needed */
+    white-space: nowrap; /* Prevent name from wrapping */
+  }
+
+
+ /* Footer Area */
+
+ footer {
+	background-color: #312b3d;
+ }
+.footer-area {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 70%;
+    min-width: 700px;
+    min-height: 250px;
+    height: auto;
+    padding-bottom: 50px;
+}
+.footer-area ul {
+    list-style: none;
+    padding-top: 10px;
+}
+.footer-area ul h4 {
+    margin-bottom: 20px;
+    color: #eee;
+    position: relative;
+}
+.footer-area ul h4:after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 30px;
+    border: none;
+    background-color: rgb(118, 70, 180);
+    margin-top: 5px;
+    position: absolute;
+    left: 0;
+}
+.footer-area ul li a, .column-four li {
+    display: block;
+    text-decoration: none;
+    color: #999;
+    padding: 3px 0;
+    transition: padding 0.2s;
+}
+.footer-area ul li a:hover {
+    color: steelblue;
+    padding-left: 10px;
+}
+
+.columns {
+    /* border: 1px solid purple; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    height: 100%;
+}
+.column-one {
+    width: 25%;
+    min-width: 250px;
+    gap: 30px;
+}
+.column-one .logo {
+    display: inline;
+    height: 50px;
+    width: 240px;
+    font-size: 2rem;
+    color: #eee;
+}
+.column-one .logo span {
+    color: steelblue;
+}
+.column-two, .column-three, .column-four {
+    width: auto;
+    min-width: 150px;
+}
+.column-four {
+    gap: 30px;
+}
+
+
+/* Copyright Area */
+.copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #64577eea;
+    height: 30px;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer-tel{
+   margin-left:20%;
+}
+/*  Responsive Styling */
+@media (max-width: 1000px) {
+
+    .footer-area {
+        gap: 50px;
+        margin-bottom: 50px;
+    }
+    .footer-area, .columns, .footer-address {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 300px;
+    }
+    .column-one .logo {
+        margin-top: 50px;
+    }
+    .footer-area ul h4:after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .footer-area ul li a:hover {
+        padding-left: 0;
+    }
+    .column-four {
+        gap: 50px;
+    }
+    
+
+}
+
+
+
+@keyframes scrolling {
+
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-20%);
+    }
+}
+
+
+    /*  Responsive Styling */
+    @media (max-width: 1000px) {
+    
+        .footer-area {
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+        .footer-area, .columns, .footer-address {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 300px;
+        }
+        .column-one .logo {
+            margin-top: 50px;
+        }
+        .footer-area ul h4:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .footer-area ul li a:hover {
+            padding-left: 0;
+        }
+        .column-four {
+            gap: 50px;
+        }
+        .imlo{
+            width: 90%;
+            height: 20%;
+        } 
+        .NEP{
+            inline-size: 20%;
+
+        }
+
+    }
+    @media (max-width: 768px) {
+        header {
+          /* ... vos styles de header en mode responsive ... */
+          flex-direction: column; /* Vous avez ça */
+          /* Calculez la nouvelle hauteur de votre header en mode responsive */
+          /* Par exemple, si la hauteur devient 80px (padding + logo/nav), mettez ça : */
+          height: auto; /* Assurez-vous que la hauteur s'adapte au contenu */
+        }
+      
+        /* Assurez-vous que le logo et la navigation ne se superposent pas */
+     
+        nav {
+            /* ... vos styles de navigation responsive ... */
+            padding: 1px ; /* Ajustez le padding si nécessaire */
+        /* Centrez les liens de navigation */
+          }
+        
+          nav a {
+            margin-left: 0; /* Supprime la marge à gauche sur mobile */
+            margin-bottom: 1px; /* Ajoute de l'espace entre les liens */
+            display:inline-table; /* Affiche les liens sur des lignes séparées */
+          }
+ 
+   
+
+  @media (max-width: 768px) {
+    .footer-area {
+      min-width: auto; /* Permettre au footer de rétrécir */
+      width: 90%; /* Occuper plus de largeur */
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .footer-area {
+      flex-direction: column; /* Empiler les colonnes du footer sur les petits écrans */
+      align-items: center;
+    }
+    .columns {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    .footer-area ul h4:after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+    }
+
+    /* Styles par défaut pour les mobiles */
+main {
+    margin-top: 40%;
+}
+
+.text1 h2 {
+    font-size: 40px;
+}
+
+/* Styles pour les écrans plus grands (tablettes et desktops) */
+@media (min-width: 577px) {
+    main {
+        margin-top: 15%;
+    }
+
+    .text1 h2 {
+        font-size: 50px;
+    }
+ 
+}
+
+@media (min-width: 993px) {
+    main {
+        margin-top: 10%;
+    }
+
+    .text1 h2 {
+        font-size: 85px;
+    }
+}

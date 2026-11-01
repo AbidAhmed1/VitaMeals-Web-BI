@@ -1,0 +1,517 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  
+}
+
+:root{
+  /* ===== Colors ===== */
+  --body-color: #65c4b43b;
+  --sidebar-color: #fffffff3;
+  --primary-color: #28dd91;
+  --primary-color-light: #28dd91;
+  --toggle-color: #279466;
+  --text-color: #707070;
+
+  /* ====== Transition ====== */
+  --tran-03: all 0.2s ease;
+  --tran-03: all 0.3s ease;
+  --tran-04: all 0.3s ease;
+  --tran-05: all 0.3s ease;
+}
+
+body{
+  min-height: 300vh;
+  background-color: var(--body-color);
+  transition: var(--tran-05);
+  background: no-repeat center / cover url('https://images.unsplash.com/photo-1617957743103-310accdfb999?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Ymx1ZSUyMGdyZWVufGVufDB8fDB8fHww');
+
+}
+
+
+body.dark{
+  --body-color: #18191a;
+  --sidebar-color: #242526;
+  --primary-color:#28dd91;
+  --primary-color-light: #28dd91;
+  --toggle-color: #28dd91;
+  --text-color: #574848;
+  background-image: url("https://gifdb.com/images/high/black-background-star-constellation-9yh7ozd1p01cctby.gif"); /* Path to your dark mode image */
+
+}
+
+/* ===== Sidebar ===== */
+.sidebar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 200px; /* ===== f raj3a mtae nav baed ma thelha tnahi l blanc ===== */
+  background: var(--sidebar-color);
+  transition: var(--tran-05);
+  z-index: 100;  
+}
+.sidebar.close{
+  width: 88px;
+}
+
+/* ===== Reusable code - Here ===== */
+.sidebar li{
+  height: 50px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.sidebar header .image,
+.sidebar .icon{
+  min-width: 60px;
+  border-radius: 6px;
+}
+
+.sidebar .icon{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.sidebar .text,
+.sidebar .icon{
+  color: var(--text-color);
+  transition: var(--tran-03);
+}
+
+.sidebar .text{
+  font-size: 17px;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 1;
+}
+.sidebar.close .text{
+  opacity: 0;
+}
+/* =========================== */
+
+
+.sidebar header .image-text{
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+
+
+.sidebar header .image{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.sidebar header .toggle{
+  position: absolute;
+  top: 50%;
+  right: -25px;
+  transform: translateY(-50%) rotate(180deg);
+  height: 25px;
+  width: 25px;
+  background-color: var(--primary-color);
+  color: var(--sidebar-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  cursor: pointer;
+  transition: var(--tran-05);
+}
+
+body.dark .sidebar header .toggle{
+  color: var(--text-color);
+}
+
+.sidebar.close .toggle{
+  transform: translateY(-50%) rotate(0deg);
+}
+
+.sidebar .menu{
+  margin-top: 60px;
+}
+
+.sidebar li.search-box{
+  background-color: var(--primary-color-light);
+  cursor: pointer;
+  transition: var(--tran-05);
+}
+
+.sidebar li.search-box input{
+  height: 100%;
+  width: 100%;
+  border: none;
+  background-color: var(--primary-color-light);
+  color: var(--text-color);
+  border-radius: 6px;
+  font-size: 17px;
+  font-weight: 500;
+  transition: var(--tran-05);
+}
+.sidebar li a{
+  list-style: none;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: var(--tran-03);
+  
+}
+
+
+.sidebar li a:hover{
+  background-color: var(--primary-color);
+}
+.sidebar li a:hover .icon,
+.sidebar li a:hover .text{
+  color: var(--sidebar-color);
+}
+body.dark .sidebar li a:hover .icon,
+body.dark .sidebar li a:hover .text{
+  color: var(--text-color);
+}
+
+
+
+.sidebar .menu-bar .mode{
+  border-radius: 6px;
+  background-color: var(--primary-color-light);
+  position: relative;
+  transition: var(--tran-05);
+}
+
+.menu-bar .mode .sun-moon{
+  height: 50px;
+  width: 60px;
+}
+
+.mode .sun-moon i{
+  position: absolute;
+  
+}
+.mode .sun-moon i.sun{
+  opacity: 0;
+}
+body.dark .mode .sun-moon i.sun{
+  opacity: 1;
+}
+body.dark .mode .sun-moon i.moon{
+  opacity: 0;
+}
+
+.menu-bar  .toggle-switch{
+  position: absolute;
+  right: 0;
+  height: 100%;
+  min-width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.toggle-switch{
+  position: absolute;
+  right: 0;
+  height: 100%;
+  min-width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.toggle-switch .switch{
+  position: relative;
+  height: 22px;
+  width: 40px;
+  border-radius: 25px;
+  background-color: var(--toggle-color);
+}
+
+.switch::before{
+  content: '';
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  background-color: var(--sidebar-color);
+  transition: var(--tran-04);
+}
+
+
+
+.home{
+  position: fixed;
+
+  left: 212px;
+  height: 100vh;
+  width: calc(100% - 250px);
+  transition: var(--tran-05);
+  top: 20%;
+  
+}
+
+
+.sidebar.close ~ .home{
+  left: 78px;
+  height: 100vh;
+  width: calc(100% - 20px);
+}
+body.dark .home .text{
+  color: var(--text-color);
+}
+
+.form-label{
+color: #707070;
+  
+}
+
+
+
+
+
+
+
+.login-form {
+  width: 500px;
+  margin: 80px auto; /* Augmentation de la marge supérieure pour plus d'espace */
+  padding: 40px; /* Augmentation du padding intérieur */
+  background-color: #fff; /* Fond blanc pour le formulaire */
+  border: none; /* Suppression de la bordure par défaut */
+  border-radius: 15px; /* Bords plus arrondis */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Ombre légère pour la profondeur */
+}
+
+
+
+.group-input {
+  position: relative;
+  margin-bottom: 25px; /* Plus d'espace entre les inputs */
+}
+
+.group-input input {
+  width: 100%;
+  padding: 12px 0; /* Augmentation du padding vertical */
+  font-size: 16px;
+  color: #495057; /* Couleur de texte de l'input */
+  margin-bottom: 5px; /* Léger espace sous l'input */
+  border: none;
+  border-bottom: 2px solid #ced4da; /* Bordure inférieure plus visible */
+  outline: none;
+  background-color: transparent; /* Fond transparent pour l'input */
+}
+
+.group-input label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #6c757d; /* Couleur du label */
+  font-size: 16px;
+  pointer-events: none;
+  transition: .3s ease-in-out;
+}
+
+.group-input input:focus + span + label,
+.group-input input:valid + span + label {
+  transform: translateY(-25px); /* Remontée plus importante du label */
+  font-size: 12px;
+  color: #007bff;
+  font-weight: bold; /* Label actif en gras */
+}
+
+.group-input span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #007bff;
+  transition: .3s ease-in-out;
+}
+
+.group-input input:focus + span,
+.group-input input:valid + span {
+  width: 100%;
+}
+
+.mdp {
+  display: block;
+  margin-bottom: 20px; /* Plus d'espace pour le lien */
+  color: #007bff;
+  text-decoration: none;
+  font-size: 14px;
+  text-align: right; /* Alignement à droite */
+}
+
+.mdp:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+.btn-primary { /* Utilisation de la classe Bootstrap pour le bouton */
+  background-color: #007bff;
+  border-color: #007bff;
+  padding: 12px; /* Augmentation du padding du bouton */
+  border-radius: 8px; /* Bords arrondis pour le bouton */
+  font-size: 16px;
+  font-weight: bold; /* Texte du bouton en gras */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.compte {
+  margin-top: 20px; /* Plus d'espace pour le texte */
+  font-size: 14px;
+  text-align: center;
+  color: #6c757d;
+}
+
+.compte a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold; /* Lien en gras */
+}
+
+.compte a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+.insc{
+  text-align: center;
+  color: #307553;
+  counter-reset: var(--sidebar-color);
+font-size: 40px;
+      font-family: "Gloria Hallelujah", cursive;
+      font-weight: 400;
+      font-style: normal;
+      font-weight:bolder;
+      margin-bottom: 50px; /* Plus d'espace sous le titre */
+    
+    
+}
+#secon{
+  align-items: center;
+  justify-content: center;
+}
+
+    /*  Responsive Styling */
+    @media (max-width: 1000px) {
+    
+      .footer-area {
+          gap: 50px;
+          margin-bottom: 50px;
+      }
+      .footer-area, .columns, .footer-address {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          width: 300px;
+      }
+  
+      .footer-area ul h4:after {
+          left: 50%;
+          transform: translateX(-50%);
+      }
+      .footer-area ul li a:hover {
+          padding-left: 0;
+      }
+      .column-four {
+          gap: 50px;
+      }
+      
+  
+  }
+  @media (max-width: 768px) {
+      header {
+        /* ... vos styles de header en mode responsive ... */
+        flex-direction: column; /* Vous avez ça */
+        /* Calculez la nouvelle hauteur de votre header en mode responsive */
+        /* Par exemple, si la hauteur devient 80px (padding + logo/nav), mettez ça : */
+        height: auto; /* Assurez-vous que la hauteur s'adapte au contenu */
+      }
+    
+      /* Assurez-vous que le logo et la navigation ne se superposent pas */
+   
+      nav {
+          /* ... vos styles de navigation responsive ... */
+          padding: 1px ; /* Ajustez le padding si nécessaire */
+      /* Centrez les liens de navigation */
+        }
+      
+        nav a {
+          margin-left: 0; /* Supprime la marge à gauche sur mobile */
+          margin-bottom: 1px; /* Ajoute de l'espace entre les liens */
+          display:inline-table; /* Affiche les liens sur des lignes séparées */
+        }
+    
+.bg{
+  background: no-repeat center / cover url('img/backgroundconatc.jpg');
+
+}
+ 
+      .content {
+        position: relative;
+       top: 50%;
+      }
+       #animatedImage { 
+         position: absolute;
+          width: 20%;
+          top: 39%;
+ } 
+@media (max-width: 768px) {
+  .footer-area {
+    min-width: auto; /* Permettre au footer de rétrécir */
+    width: 90%; /* Occuper plus de largeur */
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-area {
+    flex-direction: column; /* Empiler les colonnes du footer sur les petits écrans */
+    align-items: center;
+  }
+  .columns {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .footer-area ul h4:after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+  }
+  /* ... Vos media queries existantes pour le footer et le header ... */
+
+@media (max-width: 768px) {
+.sidebar close{
+  padding-left: 60%;
+}
+
+}

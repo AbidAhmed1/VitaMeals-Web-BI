@@ -1,0 +1,627 @@
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+    background: no-repeat center / cover url('/docteur/css/backgroundconatc.jpg');
+
+}
+ /* DEBUT BARRE NAV  */ 
+ .section-1 {
+	width: 100%;
+	background-size: cover;
+	height: 35vh;
+	background-position: center;
+}
+.logo img {
+    height: 30px; /* Réduit la hauteur à 30 pixels (ajustez selon vos besoins) */
+    /* Si vous préférez définir la largeur : */
+    /* width: 80px; */
+}
+ .logo2 img{
+    height: 60px; /* Réduit la hauteur à 30 pixels (ajustez selon vos besoins) */
+    /* Si vous préférez définir la largeur : */
+    /* width: 80px; */
+ }
+
+header {
+	display: flex;
+	padding: 30px;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	transition: 500ms;
+    background-color:#312b3d;
+    justify-content: center;
+	z-index: 100;
+}
+
+nav a {
+	margin-left: 120px;
+	font-size: 15px;
+	text-decoration: none;
+	font-family: sans-serif;
+	color: #eee;
+	text-transform: uppercase;
+	border-bottom:  3px solid transparent;
+	padding: 10px 1px;
+	transition: 200ms;
+}
+.active {
+	border-color: #00B3FF;
+}
+nav a:hover {
+	border-color: #00B3FF;
+}
+.logo {
+	font-size: 20px;
+	font-family: sans-serif;
+	margin-left: 60px;
+	color: #fff;
+    justify-content:right;
+}
+.bgc {
+	background: #eee;
+	padding: 10px;
+}
+.bgc .logo {
+	font-size: 30px;
+	color: #000;
+}
+.bgc nav a {
+	color: #222;
+}
+
+
+
+
+@media (max-width: 769px){
+	header {
+		flex-direction: column;
+		padding: 20px;
+	}
+	nav {
+		padding: 15px;
+		margin: 0px;
+	}
+}
+
+ /* FIN BARRE NAV*/ 
+
+ /* FIN BARRE NAV*/ 
+
+
+
+  /* DEBUT CONTINUE*/ 
+
+  
+.text1{
+	width: 55%;
+}
+.text1 h2{
+	color: #386e53;
+	font-size: 85px;
+	animation:to_right 1s ease forwards .8s;
+    font-family: "Viga", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.text1 h1{
+	color: #386e53c7;
+	font-size: 50px;
+	animation:to_right 1s ease forwards .8s;
+    font-family: "Galindo", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.text1 h2:nth-child(2){
+	font-size: 85px;
+	color: #386e53;
+	animation-delay: .9s;
+}
+.text1 h1:nth-child(2){
+	font-size: 50px;
+	color: #386e538c;
+	animation-delay: .9s;
+}
+
+
+.text1 p{
+	font-size: 30px;
+	margin: 40px 0;
+    width: 70%;
+	color: #ca3131;
+	animation:to_right 1s ease forwards .8s;
+    font-family: "Nothing You Could Do", cursive;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.btn{
+position: sticky;	
+border: double #7d8f9648 ;
+	background: rgb(77, 204, 155);
+	font-size: 20px;
+	cursor: pointer;
+	border-radius: 10px;
+	transition: .3s;
+    left: 70%;
+	animation:to_right 1s ease forwards 1.1s;
+
+}
+.btn a{
+	text-decoration: none;
+	color: #ffffff;
+	animation:to_right 1s ease forwards 1.1s;
+    font-family: "Dancing Script", cursive;
+
+
+}
+
+.btn:hover, .btn:nth-child(2) {
+background-color: #cf6a72;
+box-shadow: 0 0 15px #00B3FF;
+}
+.btn:nth-child(2)  :hover {
+	background-color: transparent;
+	 box-shadow : none;
+	 color: #000;
+  }
+
+.img{
+position: absolute;
+right: 0;
+pointer-events: none;
+z-index: 3;
+bottom: 3%;
+}
+.circle{
+	height: 60%;
+	right: 30px;
+	bottom: -80px;
+	z-index: 0;
+	transform: rotateX(60deg);
+	animation: opacity  5s ease forwards .10s , spin 10s linear infinite ;
+
+}  
+
+.text1 *{
+	opacity: 0;
+}
+.hopt{
+	animation: to_bottom   forwards 1.5s;
+}
+
+/* keyframes */
+@keyframes to_bottom{
+	0%{
+		opacity: 0;
+		transform: translateY(-50px);
+
+}
+    100%{
+		opacity:1;
+		transform: translateY(0);
+	}
+
+}
+
+@keyframes to_right{
+	0%{
+		opacity: 0;
+		transform: translateX(-50px);
+
+}
+    100%{
+		opacity:1;
+		transform: translateX(0);
+	}
+
+}
+ 
+@keyframes spin{
+	0%{
+		transform: rotateX(60deg) rotate(0deg); 
+
+}
+    100%{
+		transform: rotateX(60deg) rotate(360deg);
+	}
+
+}
+
+@keyframes scale_opacity{
+	0%{
+		opacity: 0;
+		transform: scale(0);
+
+}
+    100%{
+		opacity:1;
+		transform: scale(1);
+	}
+
+}
+
+@keyframes opacity{
+	0%{
+		opacity: 0;
+
+}
+    100%{
+		opacity:1;
+	}
+
+}
+
+/* Statistiques */
+.stats h2, .features h2 {
+    font-family: "Limelight", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 65px;
+line-height: 1;
+margin: 0;
+padding: 0;
+text-transform: uppercase;
+letter-spacing: -5px;
+text-align: center;
+color: 	  #48e0a1;
+text-shadow:
+-1px -1px 0 #5f0d0d,
+-1px -1px 0 #5f0d0d,
+-1px -1px 0 #5f0d0d,
+-1px -1px 0 #bb7c7c,
+
+}
+
+
+.stats-grid, .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stat-item, .feature-item {
+    background: #f9f9f9;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-item:hover, .feature-item:hover {
+    box-shadow: 0 10px 60px rgba(0, 0, 0, 0.15);
+}
+
+.stat-item i, .feature-item i {
+    font-size: 4rem;
+    color: #08e2c9;
+    margin-bottom: 1rem;
+}
+
+.stat-item h3, .feature-item h3 {
+    font-size: 3rem;
+    color: #042b26;
+    margin: 0.5rem 0;
+    font-weight: 600;
+    font-family: "Dancing Script", cursive;
+
+}
+
+.stat-item p, .feature-item p {
+    font-size: 1rem;
+    color: #c94d4d;
+    font-family: "Enriqueta", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+ /* Bouton to top */
+
+
+
+ /* Footer Area */
+
+ footer {
+	background-color: #312b3d;
+ }
+.footer-area {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 70%;
+    min-width: 700px;
+    min-height: 250px;
+    height: auto;
+    padding-bottom: 50px;
+}
+.footer-area ul {
+    list-style: none;
+    padding-top: 10px;
+}
+.footer-area ul h4 {
+    margin-bottom: 20px;
+    color: #eee;
+    position: relative;
+}
+.footer-area ul h4:after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 30px;
+    border: none;
+    background-color: rgb(118, 70, 180);
+    margin-top: 5px;
+    position: absolute;
+    left: 0;
+}
+.footer-area ul li a, .column-four li {
+    display: block;
+    text-decoration: none;
+    color: #999;
+    padding: 3px 0;
+    transition: padding 0.2s;
+}
+.footer-area ul li a:hover {
+    color: steelblue;
+    padding-left: 10px;
+}
+
+.columns {
+    /* border: 1px solid purple; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    height: 100%;
+}
+.column-one {
+    width: 25%;
+    min-width: 250px;
+    gap: 30px;
+}
+.column-one .logo {
+    display: inline;
+    height: 50px;
+    width: 240px;
+    font-size: 2rem;
+    color: #eee;
+}
+.column-one .logo span {
+    color: steelblue;
+}
+.column-two, .column-three, .column-four {
+    width: auto;
+    min-width: 150px;
+}
+.column-four {
+    gap: 30px;
+}
+
+/* Copyright Area */
+.copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #64577eea;
+    height: 30px;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer-tel{
+   margin-left:20%;
+}
+/*  Responsive Styling */
+@media (max-width: 1000px) {
+
+    .footer-area {
+        gap: 50px;
+        margin-bottom: 50px;
+    }
+    .footer-area, .columns, .footer-address {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 300px;
+    }
+    .column-one .logo {
+        margin-top: 50px;
+    }
+    .footer-area ul h4:after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .footer-area ul li a:hover {
+        padding-left: 0;
+    }
+    .column-four {
+        gap: 50px;
+    }
+    
+
+}
+
+
+.Partn {
+    display: grid;
+    place-items: center;
+}
+
+.h1partn{
+    font-family: "Limelight", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 65px;
+line-height: 1;
+margin: 0;
+padding: 0;
+text-transform: uppercase;
+letter-spacing: -5px;
+text-align: center;
+color: 	  #52c293;
+text-shadow:
+-1px -1px 0 #5f0d0d,
+-1px -1px 0 #5f0d0d,
+-1px -1px 0 #5f0d0d,
+-1px -1px 0 #bb7c7c,
+
+    
+}
+
+.sliderr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 80%;
+    overflow: hidden;
+    background-color: transparent;
+    border-radius: 30px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.4px);
+    -webkit-backdrop-filter: blur(7.4px);
+    border: 1px solid rgba(231, 212, 212, 0.4);
+}
+
+.slideritemsS {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: scrolling 10s linear infinite;
+    gap: 50px;
+
+
+}
+
+@keyframes scrolling {
+
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-20%);
+    }
+}
+
+.slideritemsS img {
+    width: 12%;
+    margin: 20px;
+
+}
+    /*  Responsive Styling */
+    @media (max-width: 1000px) {
+    
+        .footer-area {
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+        .footer-area, .columns, .footer-address {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 300px;
+        }
+        .column-one .logo {
+            margin-top: 50px;
+        }
+        .footer-area ul h4:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .footer-area ul li a:hover {
+            padding-left: 0;
+        }
+        .column-four {
+            gap: 50px;
+        }
+        
+    
+    }
+    @media (max-width: 768px) {
+        header {
+          /* ... vos styles de header en mode responsive ... */
+          flex-direction: column; /* Vous avez ça */
+          /* Calculez la nouvelle hauteur de votre header en mode responsive */
+          /* Par exemple, si la hauteur devient 80px (padding + logo/nav), mettez ça : */
+          height: auto; /* Assurez-vous que la hauteur s'adapte au contenu */
+        }
+      
+        /* Assurez-vous que le logo et la navigation ne se superposent pas */
+     
+        nav {
+            /* ... vos styles de navigation responsive ... */
+            padding: 1px ; /* Ajustez le padding si nécessaire */
+        /* Centrez les liens de navigation */
+          }
+        
+          nav a {
+            margin-left: 0; /* Supprime la marge à gauche sur mobile */
+            margin-bottom: 1px; /* Ajoute de l'espace entre les liens */
+            display:inline-table; /* Affiche les liens sur des lignes séparées */
+          }
+      
+  .bg{
+    background: no-repeat center / cover url('img/backgroundconatc.jpg');
+
+  }
+   
+        .content {
+          position: relative;
+         top: 50%;
+        }
+         .hopt { 
+           position: absolute;
+            width: 40%;
+            top: 80;
+   } 
+   .circle { 
+    position: absolute;
+     width: 15px;
+     top: 60%;
+     z-index: 0;
+     transform: rotateX(60deg);
+     animation: opacity  5s ease forwards .10s , spin 10s linear infinite ;
+   bottom: -80px;   
+
+} 
+.text1 p{
+text-align: center;
+
+}
+
+  @media (max-width: 768px) {
+    .footer-area {
+      min-width: auto; /* Permettre au footer de rétrécir */
+      width: 90%; /* Occuper plus de largeur */
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .footer-area {
+      flex-direction: column; /* Empiler les colonnes du footer sur les petits écrans */
+      align-items: center;
+    }
+    .columns {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    .footer-area ul h4:after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+    }

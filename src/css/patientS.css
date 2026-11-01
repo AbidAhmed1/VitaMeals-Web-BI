@@ -1,0 +1,454 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+ /* DEBUT BARRE NAV  */ 
+ .section-1 {
+	width: 100%;
+	background-size: cover;
+	height: 35vh;
+	background-position: center;
+}
+header {
+	display: flex;
+	padding: 30px;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	transition: 500ms;
+  background-color:#312b3d;
+  justify-content: center;
+	z-index: 100;
+}
+.logo img {
+  height: 30px; /* Réduit la hauteur à 30 pixels (ajustez selon vos besoins) */
+  /* Si vous préférez définir la largeur : */
+  /* width: 80px; */
+}
+.logo2 img{
+  height: 60px; /* Réduit la hauteur à 30 pixels (ajustez selon vos besoins) */
+  /* Si vous préférez définir la largeur : */
+  /* width: 80px; */
+}
+
+nav a {
+	margin-left: 120px;
+	font-size: 15px;
+	text-decoration: none;
+	font-family: sans-serif;
+	color: #eee;
+	text-transform: uppercase;
+	border-bottom:  3px solid transparent;
+	padding: 10px 1px;
+	transition: 200ms;
+}
+.active {
+	border-color: #00B3FF;
+}
+nav a:hover {
+	border-color: #00B3FF;
+}
+.logo {
+	font-size: 35px;
+	font-family: sans-serif;
+	margin-left: 70px;
+	color: #fff;
+    justify-content:right;
+}
+.bgc {
+	background: #eee;
+	padding: 10px;
+}
+.bgc .logo {
+	font-size: 30px;
+	color: #000;
+}
+.bgc nav a {
+	color: #222;
+}
+
+
+
+
+@media (max-width: 769px){
+	header {
+		flex-direction: column;
+		padding: 20px;
+	}
+	nav {
+		padding: 15px;
+		margin: 0px;
+	}
+}
+
+ /* FIN BARRE NAV*/ 
+
+
+
+/* Page patients */
+
+.LSP {
+    font-size: 3.5em;
+    font-weight: 800;
+    color:#175674;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Ombre subtile */
+    letter-spacing: -0.05em; /* Ajustement de l'espacement des lettres */
+    text-align: center;
+    margin-bottom: 1.2em;
+    background-image: url(3d-illustration-of-blue-medical-report-png.png);
+    background-repeat: no-repeat;
+    background-size: 80px auto; 
+    background-position:  center 20%;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    z-index: -1; 
+}
+.search-form {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 20px auto; /* Centre horizontalement */
+    max-width: 400px; /* Limite la largeur pour un meilleur aspect */
+  }
+  
+  #search-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+  }
+  
+  .search-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1em;
+    outline: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-btn:hover {
+    background-color: #0056b3;
+  }
+
+  .table-body {
+    width: 95%;
+    max-height: calc(89% - 1.6rem);
+    background-color: #fffb;
+  
+    margin: .8rem auto;
+    border-radius: .6rem;
+  
+    overflow: auto;
+    overflow: overlay;
+  }
+  
+  
+  .table-body::-webkit-scrollbar{
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+  
+  .table-body::-webkit-scrollbar-thumb{
+    border-radius: .5rem;
+    background-color: #0004;
+    visibility: hidden;
+  }
+  
+  
+  
+  
+  
+  table {
+    width: 100%;
+  }
+  
+  
+  
+  table, th, td {
+    border-collapse: collapse;
+    padding: 1rem;
+    text-align: left;
+  }
+  
+  thead th {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #d5d1defe;
+    cursor: pointer;
+    text-transform: capitalize;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #0000000b;
+  }
+  
+  tbody tr {
+    --delay: .1s;
+    transition: .5s ease-in-out var(--delay), background-color 0s;
+  }
+  
+  tbody tr.hide {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  
+  tbody tr:hover {
+    background-color: #fff6 !important;
+  }
+  
+  tbody tr td,
+  tbody tr td p,
+  tbody tr td img {
+    transition: .2s ease-in-out;
+  }
+  
+  tbody tr.hide td,
+  tbody tr.hide td p {
+    padding: 0;
+    font: 0 / 0 sans-serif;
+    transition: .2s ease-in-out .5s;
+  }
+  
+  tbody tr.hide td img {
+    width: 0;
+    height: 0;
+    transition: .2s ease-in-out .5s;
+  }
+  
+  .modif {
+    padding: .4rem 0;
+    border-radius: 2rem;
+    text-align: center;
+    background-color: #86e49d;
+    color: #006b21;
+  }
+  
+  
+  
+
+  
+  thead th span.icon-arrow {
+    display: inline-block;
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    border: 1.4px solid transparent;
+    
+    text-align: center;
+    font-size: 1rem;
+    
+    margin-left: .5rem;
+    transition: .2s ease-in-out;
+  }
+  
+  thead th:hover span.icon-arrow{
+    border: 1.4px solid #6c00bd;
+  }
+  
+  thead th:hover {
+    color: #6c00bd;
+  }
+  
+  thead th.active span.icon-arrow{
+    background-color: #6c00bd;
+    color: #fff;
+  }
+  
+  thead th.asc span.icon-arrow{
+    transform: rotate(180deg);
+  }
+  
+  thead th.active,tbody td.active {
+    color: #6c00bd;
+  }
+
+ /* Footer Area */
+
+ footer {
+	background-color: #312b3d;
+ }
+.footer-area {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 70%;
+    min-width: 700px;
+    min-height: 250px;
+    height: auto;
+    padding-bottom: 50px;
+}
+.footer-area ul {
+    list-style: none;
+    padding-top: 10px;
+}
+.footer-area ul h4 {
+    margin-bottom: 20px;
+    color: #eee;
+    position: relative;
+}
+.footer-area ul h4:after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 30px;
+    border: none;
+    background-color: steelblue;
+    margin-top: 5px;
+    position: absolute;
+    left: 0;
+}
+.footer-area ul li a, .column-four li {
+    display: block;
+    text-decoration: none;
+    color: #999;
+    padding: 3px 0;
+    transition: padding 0.2s;
+}
+.footer-area ul li a:hover {
+    color: steelblue;
+    padding-left: 10px;
+}
+
+.columns {
+    /* border: 1px solid purple; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    height: 100%;
+}
+.column-one {
+    width: 25%;
+    min-width: 250px;
+    gap: 30px;
+}
+.column-one .logo {
+    display: inline;
+    height: 50px;
+    width: 240px;
+    font-size: 2rem;
+    color: #eee;
+}
+.column-one .logo span {
+    color: steelblue;
+}
+.column-two, .column-three, .column-four {
+    width: auto;
+    min-width: 150px;
+}
+.column-four {
+    gap: 30px;
+}
+
+/* Copyright Area */
+.copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #64577eea;
+    height: 30px;
+    width: 100%;
+    bottom: 0;
+}
+
+    /*  Responsive Styling */
+    @media (max-width: 1000px) {
+    
+      .footer-area {
+          gap: 50px;
+          margin-bottom: 50px;
+      }
+      .footer-area, .columns, .footer-address {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          width: 300px;
+      }
+      .column-one .logo {
+          margin-top: 50px;
+      }
+      .footer-area ul h4:after {
+          left: 50%;
+          transform: translateX(-50%);
+      }
+      .footer-area ul li a:hover {
+          padding-left: 0;
+      }
+      .column-four {
+          gap: 50px;
+      }
+      
+  
+  }
+  @media (max-width: 768px) {
+      header {
+        /* ... vos styles de header en mode responsive ... */
+        flex-direction: column; /* Vous avez ça */
+        /* Calculez la nouvelle hauteur de votre header en mode responsive */
+        /* Par exemple, si la hauteur devient 80px (padding + logo/nav), mettez ça : */
+        height: auto; /* Assurez-vous que la hauteur s'adapte au contenu */
+      }
+    
+      /* Assurez-vous que le logo et la navigation ne se superposent pas */
+   
+      nav {
+          /* ... vos styles de navigation responsive ... */
+          padding: 1px ; /* Ajustez le padding si nécessaire */
+      /* Centrez les liens de navigation */
+        }
+      
+        nav a {
+          margin-left: 0; /* Supprime la marge à gauche sur mobile */
+          margin-bottom: 1px; /* Ajoute de l'espace entre les liens */
+          display:inline-table; /* Affiche les liens sur des lignes séparées */
+        }
+    
+.bg{
+  background: no-repeat center / cover url('img/backgroundconatc.jpg');
+
+}
+ 
+      .content {
+        position: relative;
+       top: 50%;
+      }
+       #animatedImage { 
+         position: absolute;
+          width: 20%;
+          top: 39%;
+ } 
+@media (max-width: 768px) {
+  .footer-area {
+    min-width: auto; /* Permettre au footer de rétrécir */
+    width: 90%; /* Occuper plus de largeur */
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-area {
+    flex-direction: column; /* Empiler les colonnes du footer sur les petits écrans */
+    align-items: center;
+  }
+  .columns {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .footer-area ul h4:after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+  }
